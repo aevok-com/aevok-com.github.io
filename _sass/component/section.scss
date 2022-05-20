@@ -1,0 +1,19 @@
+.section {
+	position: relative;
+	background: $background-section;
+	padding: 90px 30px;
+}
+
+@media (hover: hover) {
+	.section {
+
+	}
+}
+
+@media (max-width: $breakpoint-small-width) {
+	.section {
+
+	}
+}
+
+@import 'section/soon';

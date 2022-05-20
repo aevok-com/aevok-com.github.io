@@ -1,0 +1,14 @@
+<main>
+	{% for section in page.sections %}
+		
+		{% assign properties = section.properties %}
+		
+		{% case section.type %}
+			
+			{% when "soon" %}
+				{% include section/soon.html properties=properties %}
+			
+		{% endcase %}
+		
+	{% endfor %}
+</main>

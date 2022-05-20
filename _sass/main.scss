@@ -1,0 +1,77 @@
+@import 'vars';
+
+html {
+	height: -webkit-fill-available;
+	&.noscroll {
+		height: 100%;
+		overflow: hidden;
+	}
+}
+
+body {
+	position: relative;
+	font-family: $main-font;
+	font-size: $main-font-size;
+	line-height: $main-line-height;
+	letter-spacing: $main-letter-spacing;
+	color: $main-text-color;
+}
+
+
+.wrapper { 
+	display: flex;
+	flex-direction: column;
+	width: $main-wrapper-width;
+	margin:0 auto !important;
+}
+
+
+main {
+	h1,
+	h2 {
+		line-height: 1.4em;
+		word-break: break-word;
+	}
+	h2 {
+		font-size: 48px;
+	}
+}
+
+img { display: block;
+}
+
+@media (hover: hover) {
+	a {
+		&:hover {
+			text-decoration: none;
+			color: $action-text-color;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-medium-width) {
+	.wrapper {
+		width: calc(100% - 60px);
+	}
+	main {
+		h2 {
+			font-size: 36px;
+		}
+	}
+}
+
+@media (max-width: $breakpoint-small-width) {
+	.wrapper {
+		width: auto;
+	}
+	main {
+		h2 {
+			font-size: 34px;
+		}
+	}
+}
+
+
+@import 'component/header';
+@import 'component/footer';
+@import 'component/section';
