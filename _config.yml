@@ -1,0 +1,8 @@
+url: https://aevok.com
+collections_dir: contents
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

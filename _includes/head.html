@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		
+		{% assign default_title = "aevōk" %}
+		{% assign default_description = "sustainable things" %}
+		{% assign default_image = "" %}
+		{% assign default_logo = "" %}
+		{% assign default_color = "" %}
+		
+		<title>{{ page.meta.title | default: default_title }}</title>
+		
+		<meta name="description" content="{{ page.meta.description | default: default_description }}">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=3.0">
+		<link rel="canonical" href="{{ page.url }}">
+		
+		<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png" sizes="150x150">
+		
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-reboot@4.5.4/reboot.css">
+		<link rel="stylesheet" href="https://cdn.wwwant.shop/fontawesome/fontawesome-pro/css/all.min.css">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;700&display=swap" rel="stylesheet">
+		
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="aevōk">
+		<meta property="og:title" content="{{ page.meta.title | default: default_title }}">
+		<meta property="og:description" content="{{ page.meta.description | default: default_ description }}">
+		<meta property="og:url" content="{{ page.url | default: "" }}">
+		<meta property="og:image" content="{{ page.meta.image | default: default_image }}">
+		<meta property="twitter:site" content="@aevok_com">
+		<meta property="twitter:title" content="{{ page.meta.title | default: default_title }}">
+		<meta property="twitter:description" content="{{ page.meta.description | default: default_description }}">
+		<meta property="twitter:url" content="{{ page.url | default: "" }}">
+		<meta property="twitter:image" content="{{ page.meta.image | default: default_image }}">
+		<meta property="twitter:card" content="summary_large_image">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="aevōk">
+		<meta name="apple-mobile-web-app-status-bar-style" content="{{ page.meta.color | default: default_color }}">
+		<link rel="apple-touch-icon" type="image/png" href="{{ page.meta.logo | default: default_logo }}">
+		<meta name="msapplication-TileImage" content="{{ page.meta.logo | default: default_logo }}">
+		<meta name="msapplication-TileColor" content="{{ page.meta.color | default: default_color }}">
+		<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<![endif]-->
+		<meta name="theme-color" content="{{ page.meta.color | default: default_color }}">
+	</head>
+	
+	{% include header.html %}

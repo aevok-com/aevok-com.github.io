@@ -1,0 +1,10 @@
+# Dependencies
+vendor/*
+
+# Cache
+.jekyll-cache/
+_site/
+
+# Dev
+.DS_Store
+.nova/*
